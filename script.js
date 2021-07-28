@@ -14,11 +14,13 @@ searchButton.addEventListener('click', (e) => {
             infoCard.innerHTML = `
             <div> 
             <img src="${response.sprites.other.dream_world.front_default}">
-            <h1>${response.forms[0].name}</h1>
-            <h2>${response.weight}</h2>           
+            <h2> Name: ${response.forms[0].name}</h2>
+            <p> Weight: ${response.weight}</p> 
+            <p> Height: ${response.height}</p>           
             </div>
             `
         }
+        document.getElementById('userInput').value="";
     }
     xhr.send();
 })
